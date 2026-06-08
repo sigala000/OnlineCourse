@@ -1,0 +1,155 @@
+/**
+ * Course data module.
+ * Contains the static dataset of all available courses.
+ * Images use placeholder URLs and should be replaced with production assets.
+ */
+
+/** @type {Array<Object>} */
+export const courses = [
+  {
+    id: 1,
+    title: 'The Ultimate Google Ads Training Course',
+    category: 'Marketing',
+    price: 100,
+    author: 'Jerome Bell',
+    image: 'https://i.pravatar.cc/500?img=11',
+  },
+  {
+    id: 2,
+    title: 'Product Management Fundamentals',
+    category: 'Management',
+    price: 480,
+    author: 'Marvin McKinney',
+    image: 'https://i.pravatar.cc/500?img=12',
+  },
+  {
+    id: 3,
+    title: 'HR Management and Analytics',
+    category: 'HR & Recruiting',
+    price: 200,
+    author: 'Leslie Alexander Li',
+    image: 'https://i.pravatar.cc/500?img=5',
+  },
+  {
+    id: 4,
+    title: 'Brand Management & PR Communications',
+    category: 'Marketing',
+    price: 530,
+    author: 'Kristin Watson',
+    image: 'https://i.pravatar.cc/500?img=9',
+  },
+  {
+    id: 5,
+    title: 'Graphic Design Basic',
+    category: 'Design',
+    price: 500,
+    author: 'Guy Hawkins',
+    image: 'https://i.pravatar.cc/500?img=13',
+  },
+  {
+    id: 6,
+    title: 'Business Development Management',
+    category: 'Management',
+    price: 400,
+    author: 'Dianne Russell',
+    image: 'https://i.pravatar.cc/500?img=5',
+  },
+  {
+    id: 7,
+    title: 'Highload Software Architecture',
+    category: 'Development',
+    price: 600,
+    author: 'Brooklyn Simmons',
+    image: 'https://i.pravatar.cc/500?img=14',
+  },
+  {
+    id: 8,
+    title: 'Human Resources – Selection and Recruitment',
+    category: 'HR & Recruiting',
+    price: 150,
+    author: 'Kathryn Murphy',
+    image: 'https://i.pravatar.cc/500?img=24',
+  },
+  {
+    id: 9,
+    title: 'User Experience. Human-centered Design',
+    category: 'Design',
+    price: 240,
+    author: 'Cody Fisher',
+    image: 'https://i.pravatar.cc/500?img=15',
+  },
+  {
+    id: 10,
+    title: 'Digital Marketing Strategy',
+    category: 'Marketing',
+    price: 320,
+    author: 'Jenny Wilson',
+    image: 'https://i.pravatar.cc/500?img=16',
+  },
+  {
+    id: 11,
+    title: 'Content Marketing Masterclass',
+    category: 'Marketing',
+    price: 280,
+    author: 'Jerome Bell',
+    image: 'https://i.pravatar.cc/500?img=11',
+  },
+  {
+    id: 12,
+    title: 'Agile Project Management',
+    category: 'Management',
+    price: 350,
+    author: 'Kristin Watson',
+    image: 'https://i.pravatar.cc/500?img=9',
+  },
+  {
+    id: 13,
+    title: 'Advanced React Patterns',
+    category: 'Development',
+    price: 520,
+    author: 'Cody Fisher',
+    image: 'https://i.pravatar.cc/500?img=15',
+  },
+  {
+    id: 14,
+    title: 'Node.js Microservices',
+    category: 'Development',
+    price: 380,
+    author: 'Brooklyn Simmons',
+    image: 'https://i.pravatar.cc/500?img=14',
+  },
+  {
+    id: 15,
+    title: 'iOS App Development',
+    category: 'Development',
+    price: 490,
+    author: 'Dianne Russell',
+    image: 'https://i.pravatar.cc/500?img=5',
+  },
+  {
+    id: 16,
+    title: 'Data Science with Python',
+    category: 'Development',
+    price: 550,
+    author: 'Marvin McKinney',
+    image: 'https://i.pravatar.cc/500?img=12',
+  },
+  {
+    id: 17,
+    title: 'Social Media Advertising',
+    category: 'Marketing',
+    price: 290,
+    author: 'Kathryn Murphy',
+    image: 'https://i.pravatar.cc/500?img=24',
+  },
+];
+
+/** @type {Array<string>} */
+export const categories = [
+  'All',
+  'Marketing',
+  'Management',
+  'HR & Recruiting',
+  'Design',
+  'Development',
+];

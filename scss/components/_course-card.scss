@@ -1,0 +1,117 @@
+// =============================================================================
+// Course Card
+// =============================================================================
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-bg-white;
+  border-radius: $radius-sm;
+  box-shadow: $shadow-card;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+  &:hover,
+  &:focus-within {
+    box-shadow: $shadow-card-hover;
+    transform: translateY(-4px);
+  }
+
+  &__image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background-color: $color-bg-yellow;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+
+    .course-card:hover &,
+    .course-card:focus-within & {
+      transform: scale(1.05);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: $space-5;
+  }
+
+  &__badge {
+    display: inline-block;
+    align-self: flex-start;
+    padding: $space-1 $space-2;
+    border-radius: $radius-sm;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    color: $color-bg-white;
+    text-transform: capitalize;
+    margin-bottom: $space-3;
+
+    &--marketing {
+      background-color: $color-badge-marketing;
+    }
+
+    &--management {
+      background-color: $color-badge-management;
+    }
+
+    &--hr-recruiting {
+      background-color: $color-badge-hr;
+    }
+
+    &--design {
+      background-color: $color-badge-design;
+    }
+
+    &--development {
+      background-color: $color-badge-development;
+    }
+  }
+
+  &__title {
+    font-size: clamp(rem(15), 1.2vw, rem(18));
+    font-weight: $font-weight-bold;
+    color: $color-text-heading;
+    line-height: $line-height-tight;
+    margin-bottom: $space-4;
+    flex-grow: 1;
+
+    // Ensure consistent visual height across cards
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $space-2;
+    font-size: $font-size-sm;
+  }
+
+  &__price {
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+  }
+
+  &__divider {
+    width: 1px;
+    height: rem(14);
+    background-color: $color-border;
+  }
+
+  &__author {
+    color: $color-text-muted;
+  }
+}

@@ -1,0 +1,131 @@
+// =============================================================================
+// Courses Section Layout
+// =============================================================================
+
+.courses {
+  position: relative;
+  padding-block: clamp(3rem, 5vw, 5rem);
+  overflow: hidden;
+
+  // Decorative dots pattern — top right
+  &::before {
+    content: '';
+    position: absolute;
+    top: rem(40);
+    right: rem(40);
+    width: rem(120);
+    height: rem(120);
+    background-image: radial-gradient(circle, $color-bg-yellow 2px, transparent 2px);
+    background-size: rem(12) rem(12);
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 0;
+
+    @include mq($bp-small-tablet) {
+      width: rem(160);
+      height: rem(160);
+    }
+  }
+
+  // Decorative arrows — left side
+  &__decor-left {
+    position: absolute;
+    top: 45%;
+    left: rem(-20);
+    display: none;
+    pointer-events: none;
+    z-index: 0;
+
+    @include mq($bp-tablet) {
+      display: block;
+    }
+
+    svg {
+      width: rem(60);
+      height: rem(60);
+      color: $color-bg-yellow;
+      opacity: 0.5;
+    }
+  }
+
+  // Decorative arrows — right side
+  &__decor-right {
+    position: absolute;
+    top: 50%;
+    right: rem(-20);
+    display: none;
+    pointer-events: none;
+    z-index: 0;
+
+    @include mq($bp-tablet) {
+      display: block;
+    }
+
+    svg {
+      width: rem(60);
+      height: rem(60);
+      color: $color-bg-yellow;
+      opacity: 0.5;
+    }
+  }
+
+  &__container {
+    @include container;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: $space-10;
+  }
+
+  &__subtitle {
+    display: block;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $color-text-heading;
+    margin-bottom: $space-3;
+  }
+
+  &__title {
+    font-size: clamp($font-size-xl, 3vw, $font-size-2xl);
+    font-weight: $font-weight-black;
+    color: $color-text-heading;
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+    margin-bottom: $space-8;
+
+    @include mq($bp-small-tablet) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp($space-4, 2vw, $space-6);
+    margin-bottom: $space-10;
+
+    @include mq($bp-mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq($bp-tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__load-more {
+    display: flex;
+    justify-content: center;
+  }
+}

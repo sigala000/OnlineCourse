@@ -1,0 +1,57 @@
+// =============================================================================
+// Button
+// =============================================================================
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  padding: $space-3 $space-6;
+  border-radius: $radius-sm;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-tight;
+  color: $color-text-heading;
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &--load-more {
+    padding: $space-3 $space-5;
+    font-size: $font-size-sm;
+    color: $color-text-heading;
+
+    &:hover {
+      color: $color-primary;
+
+      .button__icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__icon {
+    width: rem(16);
+    height: rem(16);
+    transition: transform 0.4s ease;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}

@@ -1,0 +1,48 @@
+// =============================================================================
+// Search
+// =============================================================================
+
+.search {
+  position: relative;
+  width: 100%;
+
+  @include mq($bp-small-tablet) {
+    max-width: rem(315);
+  }
+
+  &__input {
+    width: 100%;
+    padding: $space-3 $space-10 $space-3 $space-4;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    font-size: $font-size-sm;
+    color: $color-text-heading;
+    background-color: $color-bg-white;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &::placeholder {
+      color: $color-text-muted;
+    }
+
+    &:hover {
+      border-color: #cdd0d5;
+    }
+
+    &:focus {
+      border-color: $color-primary;
+      box-shadow: 0 0 0 3px rgba($color-primary, 0.15);
+      outline: none;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: $space-4;
+    top: 50%;
+    transform: translateY(-50%);
+    width: rem(16);
+    height: rem(16);
+    color: $color-text-muted;
+    pointer-events: none;
+  }
+}

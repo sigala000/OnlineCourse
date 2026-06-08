@@ -1,0 +1,13 @@
+// =============================================================================
+// Functions
+// =============================================================================
+
+/**
+ * Convert pixels to rems.
+ * @param {number} $px - Pixel value to convert.
+ * @param {number} $base - Base font size in pixels.
+ * @return {number} Rem value.
+ */
+@function rem($px, $base: 16) {
+  @return calc($px / $base) * 1rem;
+}

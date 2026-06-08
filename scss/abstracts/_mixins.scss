@@ -1,0 +1,38 @@
+// =============================================================================
+// Mixins
+// =============================================================================
+
+/**
+ * Media query mixin for min-width breakpoints.
+ * @param {string} $breakpoint - Breakpoint value.
+ */
+@mixin mq($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+/**
+ * Visually hidden but accessible to screen readers.
+ */
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/**
+ * Container centering with max-width and padding.
+ */
+@mixin container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin-inline: auto;
+  padding-inline: $container-padding;
+}

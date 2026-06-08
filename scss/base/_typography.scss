@@ -1,0 +1,28 @@
+// =============================================================================
+// Typography
+// =============================================================================
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  color: $color-text-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-text-heading;
+  line-height: $line-height-tight;
+  font-weight: $font-weight-black;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}

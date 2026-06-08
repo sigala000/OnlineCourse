@@ -1,0 +1,23 @@
+{
+  "name": "online-course-catalog",
+  "version": "1.0.0",
+  "description": "Production-quality online course catalog page with filtering, search, and load more functionality",
+  "main": "index.html",
+  "scripts": {
+    "build:css": "sass scss/main.scss css/main.css --style=compressed",
+    "watch:css": "sass scss/main.scss css/main.css --watch",
+    "serve": "npx serve ."
+  },
+  "keywords": [
+    "course-catalog",
+    "frontend",
+    "scss",
+    "vanilla-js",
+    "bem"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.70.0"
+  }
+}
